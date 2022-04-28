@@ -115,6 +115,14 @@ def uploadApk() {
     }
 }
 
+//获取当前时间
+def getNowTime() {
+    def str = "";
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Calendar lastDate = Calendar.getInstance();
+    str = sdf.format(lastDate.getTime());
+    return str;
+}
 def sendMsgToDing(def data) {
     //括号中的参数需要替换成你自己的webhook url
     def conn = new URL("https://oapi.dingtalk.com/robot/send?access_token=3e7de547c94150e4e41140f88f1dcd3b308e9c87c39829aa3336d5767fd16e24").openConnection()
