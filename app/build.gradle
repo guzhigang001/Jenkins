@@ -2,15 +2,16 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
-
+//jenkins 自动化打包并上传蒲公英 发布到钉钉
+apply from: '../jenkins_package.gradle'
 android {
-    compileSdkVersion 31
-    buildToolsVersion "32.0.0"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "org.ggxz.jenkins"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
